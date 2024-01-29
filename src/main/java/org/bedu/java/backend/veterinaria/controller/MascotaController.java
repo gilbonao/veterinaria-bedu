@@ -3,9 +3,9 @@ package org.bedu.java.backend.veterinaria.controller;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
-import org.bedu.java.backend.veterinaria.dto.CreateMascotaDTO;
-import org.bedu.java.backend.veterinaria.dto.MascotaDTO;
-import org.bedu.java.backend.veterinaria.dto.UpdateMascotaDTO;
+import org.bedu.java.backend.veterinaria.dto.mascota.CreateMascotaDTO;
+import org.bedu.java.backend.veterinaria.dto.mascota.MascotaDTO;
+import org.bedu.java.backend.veterinaria.dto.mascota.UpdateMascotaDTO;
 import org.bedu.java.backend.veterinaria.exception.MascotaNotFoundException;
 import org.bedu.java.backend.veterinaria.service.MascotaService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +13,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @Tag(name = "Endpoints de Mascotas", description = "CRUD de Mascotas")
 @RestController
@@ -27,6 +28,13 @@ public class MascotaController {
     @ResponseStatus(HttpStatus.OK)
     public List<MascotaDTO> findAll() {
         return service.findAll();
+    }
+
+    @Operation(summary = "Obtiene una de las mascotas")
+    @GetMapping("/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public Optional<MascotaDTO> findbyId(@PathVariable Long id) {
+        return service.findById(id);
     }
 
     @Operation(summary = "Crea una nueva mascota")

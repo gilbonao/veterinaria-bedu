@@ -1,4 +1,4 @@
-package org.bedu.java.backend.veterinaria.dto;
+package org.bedu.java.backend.veterinaria.dto.medicamento;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
@@ -7,7 +7,6 @@ import lombok.Data;
 import java.util.Date;
 
 @Data
-@AllArgsConstructor
 public class MedicamentoDTO {
 
     @Schema(description = "Identificador del medicamento", example = "100")

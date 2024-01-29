@@ -45,7 +45,11 @@ public class Mascota {
     private String color;
 
     // Verificar
+//    @OneToMany(mappedBy = "mascota")
+//    private List<Consulta> consultas;
 
-    @OneToMany(mappedBy = "mascota")
-    private List<Consulta> consultas;
+    @ManyToOne
+    private Propietario propietario;
+
+
 }

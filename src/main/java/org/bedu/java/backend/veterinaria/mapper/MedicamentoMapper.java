@@ -1,8 +1,8 @@
 package org.bedu.java.backend.veterinaria.mapper;
 
-import org.bedu.java.backend.veterinaria.dto.CreateMedicamentoDTO;
-import org.bedu.java.backend.veterinaria.dto.MedicamentoDTO;
-import org.bedu.java.backend.veterinaria.dto.UpdateMedicamentoDTO;
+import org.bedu.java.backend.veterinaria.dto.medicamento.CreateMedicamentoDTO;
+import org.bedu.java.backend.veterinaria.dto.medicamento.MedicamentoDTO;
+import org.bedu.java.backend.veterinaria.dto.medicamento.UpdateMedicamentoDTO;
 import org.bedu.java.backend.veterinaria.model.Medicamento;
 import org.mapstruct.*;
 

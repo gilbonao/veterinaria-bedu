@@ -1,8 +1,8 @@
 package org.bedu.java.backend.veterinaria.mapper;
 
-import org.bedu.java.backend.veterinaria.dto.consultas.CreateConsultaDTO;
-import org.bedu.java.backend.veterinaria.dto.consultas.ConsultaDTO;
-import org.bedu.java.backend.veterinaria.dto.consultas.UpdateConsultaDTO;
+import org.bedu.java.backend.veterinaria.dto.consulta.CreateConsultaDTO;
+import org.bedu.java.backend.veterinaria.dto.consulta.ConsultaDTO;
+import org.bedu.java.backend.veterinaria.dto.consulta.UpdateConsultaDTO;
 import org.bedu.java.backend.veterinaria.model.Consulta;
 import org.mapstruct.*;
 

@@ -1,4 +1,4 @@
-package org.bedu.java.backend.veterinaria.dto;
+package org.bedu.java.backend.veterinaria.dto.veterinario;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
@@ -8,7 +8,6 @@ import java.time.LocalTime;
 import java.util.Date;
 
 @Data
-@AllArgsConstructor
 public class VeterinarioDTO {
 
     @Schema(description = "Identificador del veterinario", example = "100")

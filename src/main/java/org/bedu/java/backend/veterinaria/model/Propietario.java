@@ -4,17 +4,16 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import org.springframework.format.annotation.DateTimeFormat;
 
-import java.time.LocalTime;
 import java.util.Date;
+import java.util.List;
 
 @Getter
 @Setter
 @ToString
 @Entity
-@Table(name = "veterinario")
-public class Veterinario {
+@Table(name = "propietario")
+public class Propietario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,8 +28,8 @@ public class Veterinario {
     @Column(name = "apellido_materno", nullable = false, length = 100)
     private String apellidoMaterno;
 
-    @Column(name = "fecha_nacimiento", nullable = false)
-    private Date fechaNacimiento;
+    @Column(nullable = false, length = 250)
+    private String direccion;
 
     @Column(nullable = false, length = 13)
     private String celular;
@@ -38,20 +37,14 @@ public class Veterinario {
     @Column(nullable = false, length = 100)
     private String correo;
 
+    @Column(name = "fecha_nacimiento", nullable = false)
+    private Date fechaNacimiento;
+
     @Column(nullable = false, length = 100)
-    private String especialidad;
+    private String ocupacion;
 
-    @Column(name="hora_entrada", nullable = false)
-    @DateTimeFormat(pattern = "HH:mm")
-    private LocalTime horaEntrada;
-
-    @Column(name = "hora_salida", nullable = false)
-    @DateTimeFormat(pattern = "HH:mm")
-    private LocalTime horaSalida;
-
-    // Verificar
-//    @OneToMany(mappedBy = "veterinario")
-//    private List<Consulta> consultas;
+    //De uno a muchos -> UN Propietario puede tener MUCHAS Mascotas
+//    @OneToMany(mappedBy = "propietario")
+//    private List<Mascota> mascotas;
 
 }
-

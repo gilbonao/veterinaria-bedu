@@ -1,17 +1,14 @@
-package org.bedu.java.backend.veterinaria.dto.consultas;
+package org.bedu.java.backend.veterinaria.dto.consulta;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.AllArgsConstructor;
 import lombok.Data;
+import org.bedu.java.backend.veterinaria.model.Mascota;
+import org.bedu.java.backend.veterinaria.model.Veterinario;
 
 import java.util.Date;
 
 @Data
-@AllArgsConstructor
-public class ConsultaDTO {
-
-    @Schema(description = "ID de la consulta", example = "1")
-    private Long id;
+public class UpdateConsultaDTO {
 
     @Schema(description = "Fecha de la consulta", example = "2023-11-25")
     private Date fechaConsulta;
@@ -25,8 +22,9 @@ public class ConsultaDTO {
     @Schema(description = "Observaciones adicionales", example = "Seguimiento requerido")
     private String observaciones;
 
-    // ¿Es correcto agregar estos objetos aquí?
-//    private Mascota mascota;
-//    private Veterinario veterinario;
+    // Relación
+    private Mascota mascota;
+
+    private Veterinario veterinario;
 
 }

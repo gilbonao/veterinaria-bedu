@@ -5,34 +5,36 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+import java.time.LocalTime;
 import java.util.Date;
 
 @Getter
 @Setter
 @ToString
 @Entity
-@Table(name = "consulta")
-public class Consulta {
+@Table(name = "cita")
+public class Cita {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(nullable = false)
-    private Date fechaConsulta;
+    private Date fechaCita;
 
     @Column(nullable = false)
-    private String diagnostico;
+    private LocalTime horaCita;
 
     @Column(nullable = false)
-    private String tratamientoIndicado;
+    private boolean primeraCita;
 
     @Column(nullable = false)
-    private String observaciones;
-
-    @ManyToOne
-    private Mascota mascota;
+    private String motivoCita;
 
     @ManyToOne
     private Veterinario veterinario;
+
+    @ManyToOne
+    private Propietario propietario;
 
 }

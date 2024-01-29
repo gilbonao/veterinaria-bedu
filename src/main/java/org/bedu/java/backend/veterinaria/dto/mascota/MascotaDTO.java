@@ -1,11 +1,11 @@
-package org.bedu.java.backend.veterinaria.dto;
+package org.bedu.java.backend.veterinaria.dto.mascota;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import org.bedu.java.backend.veterinaria.model.Propietario;
 
 @Data
-@AllArgsConstructor
 public class MascotaDTO {
 
     @Schema(description = "Identificador de la mascota", example = "100")
@@ -34,5 +34,8 @@ public class MascotaDTO {
 
     @Schema(description = "Color de la mascota", example = "Negro con rayas blancas")
     private String color;
+
+    private Propietario propietario;
+
 
 }

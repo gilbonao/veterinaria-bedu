@@ -1,10 +1,11 @@
-package org.bedu.java.backend.veterinaria.dto;
+package org.bedu.java.backend.veterinaria.dto.mascota;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
+import org.bedu.java.backend.veterinaria.model.Propietario;
 import org.hibernate.validator.constraints.Length;
 
 @Data
@@ -46,5 +47,7 @@ public class CreateMascotaDTO {
     @NotBlank(message = "El color de la mascota es obligatorio")
     @Length(min = 1, max = 50, message = "La descripción del color debe ser entre 1 y 50 caracteres")
     private String color;
+
+    private Propietario propietario;
 
 }

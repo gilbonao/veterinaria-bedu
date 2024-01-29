@@ -1,8 +1,8 @@
 package org.bedu.java.backend.veterinaria.service;
 
-import org.bedu.java.backend.veterinaria.dto.CreateMascotaDTO;
-import org.bedu.java.backend.veterinaria.dto.MascotaDTO;
-import org.bedu.java.backend.veterinaria.dto.UpdateMascotaDTO;
+import org.bedu.java.backend.veterinaria.dto.mascota.CreateMascotaDTO;
+import org.bedu.java.backend.veterinaria.dto.mascota.MascotaDTO;
+import org.bedu.java.backend.veterinaria.dto.mascota.UpdateMascotaDTO;
 import org.bedu.java.backend.veterinaria.exception.MascotaNotFoundException;
 import org.bedu.java.backend.veterinaria.mapper.MascotaMapper;
 import org.bedu.java.backend.veterinaria.model.Mascota;

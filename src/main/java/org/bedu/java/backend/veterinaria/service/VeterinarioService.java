@@ -1,8 +1,8 @@
 package org.bedu.java.backend.veterinaria.service;
 
-import org.bedu.java.backend.veterinaria.dto.CreateVeterinarioDTO;
-import org.bedu.java.backend.veterinaria.dto.UpdateVeterinarioDTO;
-import org.bedu.java.backend.veterinaria.dto.VeterinarioDTO;
+import org.bedu.java.backend.veterinaria.dto.veterinario.CreateVeterinarioDTO;
+import org.bedu.java.backend.veterinaria.dto.veterinario.UpdateVeterinarioDTO;
+import org.bedu.java.backend.veterinaria.dto.veterinario.VeterinarioDTO;
 import org.bedu.java.backend.veterinaria.exception.VeterinarioNotFoundException;
 import org.bedu.java.backend.veterinaria.mapper.VeterinarioMapper;
 import org.bedu.java.backend.veterinaria.model.Veterinario;

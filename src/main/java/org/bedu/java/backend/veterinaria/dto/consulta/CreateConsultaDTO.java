@@ -1,16 +1,17 @@
-package org.bedu.java.backend.veterinaria.dto.consultas;
+package org.bedu.java.backend.veterinaria.dto.consulta;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import org.bedu.java.backend.veterinaria.model.Mascota;
+import org.bedu.java.backend.veterinaria.model.Veterinario;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
 @Data
-@AllArgsConstructor
 public class CreateConsultaDTO {
 
     @Schema(description = "Fecha de la consulta", example = "2023-11-25")
@@ -30,8 +31,9 @@ public class CreateConsultaDTO {
     @NotBlank(message = "Las observaciones son obligatorias")
     private String observaciones;
 
-    // ¿Es correcto agregar estos objetos aquí?
-//    private Mascota mascota;
-//    private Veterinario veterinario;
+    // Relación
+    private Mascota mascota;
+
+    private Veterinario veterinario;
 
 }
